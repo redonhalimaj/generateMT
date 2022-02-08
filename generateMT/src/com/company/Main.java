@@ -6,10 +6,17 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Random;
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
+
+        Random rnd = new Random();
+        int number = rnd.nextInt(999);
+
+        // this will convert any number sequence into 6 character.
+        System.out.println(String.format("ATCMT%06d", number));
         // write your code here
 //        String path = "C:\\Users\\redon\\IdeaProjects\\generateMT\\src\\test\\resources\\mtFiles\\MT103.txt";
 //        ;

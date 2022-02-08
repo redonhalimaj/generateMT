@@ -1,0 +1,15 @@
+{1:F01HSHNDEHHXXXX0559735479}{2:O103<Insert_Time_Date><Receiver_BIC>0213654322<Insert_Date>0800U}{3:{108:REF11223344}{111:001}{121:51593734-c3ae-4644-aa87-1bc5157b96d1}}{4:
+:20:<Insert_Ref>
+:23B:CRED
+:32A:<Insert_Date><Insert_Currency><Insert_Amount>
+:33B:<Insert_Currency><Insert_Amount>
+:50F:/DE94210500002200005501
+1/Otto Lamprecht
+:57A:<Beneficiary_BIC>
+:59F:/9999
+1/EXXON
+2/AVE OF THE AMERICAS 5000
+3/NY/
+:70:/INV/2019-115-Q-P0321
+:71A:SHA
+-}
