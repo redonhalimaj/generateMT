@@ -5,6 +5,8 @@
 :33B:<Insert_Currency><Insert_Amount>
 :50F:/DE94210500002200005501
 1/Otto Lamprecht
+2/Hafenstraße 18a 24784
+3/Wesaterrönfeld DE
 :57A:<Beneficiary_BIC>
 :59F:/9999
 1/EXXON
