@@ -3,10 +3,10 @@
 :23B:CRED
 :32A:<Insert_Date><Insert_Currency><Insert_Amount>
 :33B:<Insert_Currency><Insert_Amount>
-:50F:/DE94210500002200005501
-1/Otto Lamprecht
-2/Hafenstraße 18a 24784
-3/Wesaterrönfeld DE
+:50F:/<Debtor_Iban>
+1/<Debtor_Name>
+2/<Debtor_Address>
+3/<Debtor_City>
 :57A:<Beneficiary_BIC>
 :59F:/9999
 1/EXXON
