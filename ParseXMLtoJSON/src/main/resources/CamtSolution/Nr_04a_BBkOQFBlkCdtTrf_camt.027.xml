@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BBkOQF:BBkOQFBlkCdtTrf xmlns:BBkOQF="urn:BBkOQF:xsd:$BBkOQFBlkCdtTrf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:BBkOQF:xsd:$BBkOQFBlkCdtTrf BBkOQFBlkCdtTrf.xsd">
+	<BBkOQF:SndgInst>MARKDEFF</BBkOQF:SndgInst>
+	<BBkOQF:RcvgInst>BANKDEFFXXX</BBkOQF:RcvgInst>
+	<BBkOQF:SrvcId>SCT</BBkOQF:SrvcId>
+	<BBkOQF:TstCode>T</BBkOQF:TstCode>
+	<BBkOQF:FType>OQF</BBkOQF:FType>
+	<BBkOQF:FileRef>2019061100018451</BBkOQF:FileRef>
+	<BBkOQF:RoutingInd>DIR</BBkOQF:RoutingInd>
+	<BBkOQF:FileBusDt>2019-06-11</BBkOQF:FileBusDt>
+	<BBkOQF:FileCycleNo>92</BBkOQF:FileCycleNo>
+	<BBkOQF:ClmNonRct xmlns="urn:iso:std:iso:20022:tech:xsd:sct:camt.027.001.06">
+		<Assgnmt>
+			<Id>20190611-018451-001</Id>
+			<Assgnr>
+				<Agt>
+					<FinInstnId>
+						<BICFI>MARKDEFF</BICFI>
+					</FinInstnId>
+				</Agt>
+			</Assgnr>
+			<Assgne>
+				<Agt>
+					<FinInstnId>
+						<BICFI>BANKDEFFXXX</BICFI>
+					</FinInstnId>
+				</Agt>
+			</Assgne>
+			<CreDtTm>2019-06-11T09:30:47Z</CreDtTm>
+		</Assgnmt>
+		<Case>
+			<Id>REF-C27-2019-06-11-TX-100A001</Id>
+			<!--Inhalt Case-ID hier wird aus der IQF-camt.027 Case-ID übernommen-->
+			<Cretr>
+				<Agt>
+					<FinInstnId>
+						<BICFI>SPARDEFFXXX</BICFI>
+						<!--BIC des originären überweisenden Zahlungsdienstleisters-->
+					</FinInstnId>
+				</Agt>
+			</Cretr>
+		</Case>
+		<Undrlyg>
+			<IntrBk>
+				<OrgnlGrpInf>
+					<OrgnlMsgId>SPARDEFFXXX20190528SCTP8001001</OrgnlMsgId>
+					<OrgnlMsgNmId>PACS.008</OrgnlMsgNmId>
+				</OrgnlGrpInf>
+				<OrgnlEndToEndId>NOTPROVIDED</OrgnlEndToEndId>
+				<OrgnlTxId>SPARDEFFXXX20190528SCTP80010010001</OrgnlTxId>
+				<OrgnlIntrBkSttlmAmt Ccy="EUR">1000.00</OrgnlIntrBkSttlmAmt>
+				<OrgnlIntrBkSttlmDt>2019-05-28</OrgnlIntrBkSttlmDt>
+				<OrgnlTxRef>
+					<SttlmInf>
+						<SttlmMtd>CLRG</SttlmMtd>
+						<ClrSys>
+							<Prtry>SCL</Prtry>
+						</ClrSys>
+					</SttlmInf>
+					<PmtTpInf>
+						<SvcLvl>
+							<Cd>SEPA</Cd>
+						</SvcLvl>
+					</PmtTpInf>
+					<Dbtr>
+						<Pty>
+							<Nm>Max Mustermann</Nm>
+						</Pty>
+					</Dbtr>
+					<DbtrAcct>
+						<Id>
+							<IBAN>DE73500000000500000000</IBAN>
+						</Id>
+					</DbtrAcct>
+					<DbtrAgt>
+						<FinInstnId>
+							<BICFI>SPARDEFFXXX</BICFI>
+						</FinInstnId>
+					</DbtrAgt>
+					<CdtrAgt>
+						<FinInstnId>
+							<BICFI>BANKDEFFXXX</BICFI>
+						</FinInstnId>
+					</CdtrAgt>
+					<Cdtr>
+						<Pty>
+							<Nm>Scotty Star</Nm>
+						</Pty>
+					</Cdtr>
+					<CdtrAcct>
+						<Id>
+							<IBAN>DE84300777000123456789</IBAN>
+						</Id>
+					</CdtrAcct>
+				</OrgnlTxRef>
+			</IntrBk>
+		</Undrlyg>
+		<InstrForAssgne>
+			<Cd> INQR </Cd>
+			<InstrInf> Claim of non receipt </InstrInf>
+		</InstrForAssgne>
+	</BBkOQF:ClmNonRct>
+</BBkOQF:BBkOQFBlkCdtTrf>

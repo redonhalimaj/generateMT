@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BBkOQF:BBkOQFBlkCdtTrf xsi:schemaLocation="urn:BBkOQF:xsd:$BBkOQFBlkCdtTrf BBkOQFBlkCdtTrf.xsd" xmlns:BBkOQF="urn:BBkOQF:xsd:$BBkOQFBlkCdtTrf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<BBkOQF:SndgInst>MARKDEFF</BBkOQF:SndgInst>
+	<BBkOQF:RcvgInst>BANKDEFFXXX</BBkOQF:RcvgInst>
+	<BBkOQF:SrvcId>SCT</BBkOQF:SrvcId>
+	<BBkOQF:TstCode>T</BBkOQF:TstCode>
+	<BBkOQF:FType>OQF</BBkOQF:FType>
+	<BBkOQF:FileRef>2019062800034225</BBkOQF:FileRef>
+	<BBkOQF:RoutingInd>RET</BBkOQF:RoutingInd>
+	<BBkOQF:FileBusDt>2019-06-28</BBkOQF:FileBusDt>
+	<BBkOQF:FileCycleNo>92</BBkOQF:FileCycleNo>
+	<BBkOQF:FIToFIPmtStsReq xmlns="urn:iso:std:iso:20022:tech:xsd:sct:pacs.028.001.01">
+		<GrpHdr>
+			<MsgId>20190628-034225-001</MsgId>
+			<CreDtTm>2019-06-28T12:30:47Z</CreDtTm>
+			<InstdAgt>
+				<FinInstnId>
+					<BICFI>BANKDEFFXXX</BICFI>
+				</FinInstnId>
+			</InstdAgt>
+		</GrpHdr>
+		<OrgnlGrpInf>
+			<OrgnlMsgId>SPARDEFFXXX20190611SCTC2701002</OrgnlMsgId>
+			<OrgnlMsgNmId>camt.027</OrgnlMsgNmId>
+		</OrgnlGrpInf>
+		<TxInf>
+			<StsReqId>SPARDEFFXXX20190628SCTP280100100001</StsReqId>
+			<OrgnlInstrId>REF-C27-2019-06-11-TX-100A002</OrgnlInstrId>
+			<OrgnlEndToEndId>NOTPROVIDED</OrgnlEndToEndId>
+			<OrgnlTxId>SPARDEFFXXX20190528SCTP800100100002</OrgnlTxId>
+			<OrgnlTxRef>
+				<IntrBkSttlmAmt Ccy="EUR">2000.00</IntrBkSttlmAmt>
+				<IntrBkSttlmDt>2019-05-28</IntrBkSttlmDt>
+				<SttlmInf>
+					<SttlmMtd>CLRG</SttlmMtd>
+					<ClrSys>
+						<Prtry>SCL</Prtry>
+					</ClrSys>
+				</SttlmInf>
+				<PmtTpInf>
+					<SvcLvl>
+						<Cd>SEPA</Cd>
+					</SvcLvl>
+				</PmtTpInf>
+				<Dbtr>
+					<Nm>Max Mustermann</Nm>
+				</Dbtr>
+				<DbtrAcct>
+					<Id>
+						<IBAN>DE73500000000500000000</IBAN>
+					</Id>
+				</DbtrAcct>
+				<DbtrAgt>
+					<FinInstnId>
+						<BICFI>SPARDEFFXXX</BICFI>
+					</FinInstnId>
+				</DbtrAgt>
+				<CdtrAgt>
+					<FinInstnId>
+						<BICFI>BANKDEFFXXX</BICFI>
+					</FinInstnId>
+				</CdtrAgt>
+				<Cdtr>
+					<Nm>Scotty Star</Nm>
+				</Cdtr>
+				<CdtrAcct>
+					<Id>
+						<IBAN>DE84300777000123456789</IBAN>
+					</Id>
+				</CdtrAcct>
+			</OrgnlTxRef>
+		</TxInf>
+	</BBkOQF:FIToFIPmtStsReq>
+</BBkOQF:BBkOQFBlkCdtTrf>
