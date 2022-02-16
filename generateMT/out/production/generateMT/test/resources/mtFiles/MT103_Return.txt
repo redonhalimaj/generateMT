@@ -1,0 +1,17 @@
+{1:F01HSHNDEHHAXXX1684236952}{2:O1030800<Insert_Date><Sending_BIC>0773<Insert_Time><Insert_Date>0800U}{3:{108:PAY<Pay_Ref>}{119:STP}{111:001}{121:d4bff294-a4cb-4cd8-92f0-ecf17572ebfd}}{4:
+:20:PAY<Pay_Ref>
+:21:PAY<Pay_Ref>
+:23B:CRED
+:32A:<Insert_Date><Currency><Amount>
+:33B:<Currency><Amount>
+:50K:/9999
+EXXON CORP.
+Ave of Americas 50
+:57A:HSHNDEHHXXX
+:59:/<Creditor_Iban>
+<Creditor_Name>
+:70:/INVOICE REF <Insert_Date>
+:71A:OUR
+:72:/RETN/
+/MREF/REFIDA
+-}{5:}
