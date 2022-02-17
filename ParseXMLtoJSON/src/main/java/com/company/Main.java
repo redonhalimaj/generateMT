@@ -33,7 +33,7 @@ public class Main {
 
                     Camt27 claimOfNonReceipt = new Camt27();
                     String output = "src/main/resources/OutputFiles/Nr_"+file.getName().replaceAll(".xml",".txt");
-                    claimOfNonReceipt.writeCamt27ile(claimOfNonReceipt.getSndgInst(parseToJson), claimOfNonReceipt.getRcvgInst(parseToJson), claimOfNonReceipt.getFileRef(parseToJson),
+                    claimOfNonReceipt.writeCamt27File(claimOfNonReceipt.getSndgInst(parseToJson), claimOfNonReceipt.getRcvgInst(parseToJson), claimOfNonReceipt.getFileRef(parseToJson),
                             claimOfNonReceipt.getSrvcId(parseToJson),claimOfNonReceipt.getAssignee(parseToJson),claimOfNonReceipt.getAssigner(parseToJson),claimOfNonReceipt.getInstrInf(parseToJson),
                             claimOfNonReceipt.getOrgnlTxId(parseToJson),claimOfNonReceipt.getCdtrNm(parseToJson),claimOfNonReceipt.getCdtrAgt(parseToJson),claimOfNonReceipt.getPmtTpInf(parseToJson),
                             claimOfNonReceipt.getDbtrAcct(parseToJson),claimOfNonReceipt.getSttlmMtd(parseToJson),claimOfNonReceipt.getClrSys(parseToJson),claimOfNonReceipt.getCdtrAcct(parseToJson),
@@ -47,6 +47,19 @@ public class Main {
                     writtenJSON =  "src/main/resources/WrittenJsonFiles/Nr_"+file.getName().replaceAll(".xml",".json");
                     String writtenJsonFileDestination = writtenJSON;
                     writeJSONFile(xmlConverted,writtenJsonFileDestination);
+
+                    Camt87 reqDateModification = new Camt87();
+                    String output = "src/main/resources/OutputFiles/Nr_"+file.getName().replaceAll(".xml",".txt");
+                    reqDateModification.writeCamt87File(reqDateModification.getSndgInst(parseToJson),reqDateModification.getRcvgInst(parseToJson),reqDateModification.getFileRef(parseToJson),
+                            reqDateModification.getSrvcId(parseToJson),reqDateModification.getFileBusDt(parseToJson),reqDateModification.getFileCycleNo(parseToJson),
+                            reqDateModification.getIntrBkSttlmDt(parseToJson),reqDateModification.getAssignee(parseToJson),reqDateModification.getAssigner(parseToJson),
+                            reqDateModification.getInstrInf(parseToJson), reqDateModification.getCreDtTm(parseToJson),reqDateModification.getAssgnmtId(parseToJson),
+                            reqDateModification.getInstrCd(parseToJson), reqDateModification.getOrgnlTxId(parseToJson), reqDateModification.getCdtrNm(parseToJson), reqDateModification.getCdtrAgt(parseToJson),
+                            reqDateModification.getPmtTpInf(parseToJson), reqDateModification.getDbtrAcct(parseToJson), reqDateModification.getSttlmMtd(parseToJson),
+                            reqDateModification.getClrSys(parseToJson), reqDateModification.getCdtrAcct(parseToJson), reqDateModification.getDbtrAgt(parseToJson), reqDateModification.getDbtrNm(parseToJson),
+                            reqDateModification.getOrgnlIntrBkSttlmAmtl(parseToJson), reqDateModification.getOrgnlIntrBkSttlmCcy(parseToJson), reqDateModification.getOrgnlMsgId(parseToJson),
+                            reqDateModification.getOrgnlMsgNmId(parseToJson), reqDateModification.getOrgnlEndToEndId(parseToJson), reqDateModification.getOrgnlIntrBkSttlmDt(parseToJson), reqDateModification.getCaseId(parseToJson),
+                            reqDateModification.getCaseCretr(parseToJson),output);
 
                 }else if(file.getName().contains("pacs.028")){
 

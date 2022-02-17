@@ -1,0 +1,31 @@
+Sending Institution: MARKDEFF
+Receiving Institution: BANKDEFFXXX
+File Reference: 2019061100018467
+Service ID: SCT
+File Bus Date: 2019-06-11
+File Cycle Number: 92
+Interbank Settlement Date: 2019-05-23
+Creation Date Time: 2019-06-11T09:30:47Z
+Assignee: BANKDEFFXXX
+Assigner: MARKDEFF
+Instruction Info: Pls adjust value date
+Assignment ID: 20190611-018467-001
+Assignment Instruction CD: INQR
+Original Transaction ID: SPARDEFFXXX20190528SCTP800100100003
+Creditor Name: Scotty Star
+Creditor Agent BIC: BANKDEFFXXX
+Creditor Account: DE84300777000123456789
+Payment to payment Info: SEPA
+Debtor Name: Max Mustermann
+Debtor Agent BIC: SPARDEFFXXX
+Debtor Account: DE73500000000500000000
+Original Instruction Settlement Amount: 3000.00
+Original Instruction Settlement Currency: EUR
+Settlement Method: CLRG
+Clearing System: SCL
+Original Message ID: SPARDEFFXXX20190528SCTP8001001
+Original Message Name ID: PACS.008
+Original End-to-end ID: NOTPROVIDED
+Original Interbank Settlement Date: 2019-05-28
+Case ID: REF-C87-2019-06-11-TX-400F031
+Case Creator : SPARDEFFXXX

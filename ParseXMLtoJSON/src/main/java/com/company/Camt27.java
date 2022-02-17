@@ -130,7 +130,7 @@ public class Camt27 {
                 .getJSONObject("Agt").getJSONObject("FinInstnId").get("BICFI").toString();
     }
 
-    public static void writeCamt27ile(String SndgInst,String RcvgInst, String FileRef,String SrvcId,
+    public static void writeCamt27File(String SndgInst,String RcvgInst, String FileRef,String SrvcId,
             String Assignee, String Assigner,String InstrInf, String OrgnlTxId,String CdtrNm,
             String CdtrAgt,String PmtTpInf, String DbtrAcct,String SttlmMtd,String ClrSys,
             String CdtrAcct, String DbtrAgt,String DbtrNm,String OrgnlMsgId,String OrgnlMsgNmId,String OrgnlEndToEndId,
