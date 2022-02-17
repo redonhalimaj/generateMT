@@ -1,0 +1,57 @@
+{"BBkOQFBlkCdtTrf": {
+    "RoutingInd": "DIR",
+    "FType": "OQF",
+    "ClmNonRct": {
+        "xmlns": "urn:iso:std:iso:20022:tech:xsd:sct:camt.027.001.06",
+        "Assgnmt": {
+            "CreDtTm": "2019-06-11T09:30:47Z",
+            "Assgne": {"Agt": {"FinInstnId": {"BICFI": "BANKDEFFXXX"}}},
+            "Id": "20190611-018451-001",
+            "Assgnr": {"Agt": {"FinInstnId": {"BICFI": "MARKDEFF"}}}
+        },
+        "InstrForAssgne": {
+            "Cd": "INQR",
+            "InstrInf": "Claim of non receipt"
+        },
+        "Undrlyg": {"IntrBk": {
+            "OrgnlTxRef": {
+                "Cdtr": {"Pty": {"Nm": "Scotty Star"}},
+                "CdtrAgt": {"FinInstnId": {"BICFI": "BANKDEFFXXX"}},
+                "PmtTpInf": {"SvcLvl": {"Cd": "SEPA"}},
+                "DbtrAcct": {"Id": {"IBAN": "DE73500000000500000000"}},
+                "SttlmInf": {
+                    "SttlmMtd": "CLRG",
+                    "ClrSys": {"Prtry": "SCL"}
+                },
+                "CdtrAcct": {"Id": {"IBAN": "DE84300777000123456789"}},
+                "DbtrAgt": {"FinInstnId": {"BICFI": "SPARDEFFXXX"}},
+                "Dbtr": {"Pty": {"Nm": "Max Mustermann"}}
+            },
+            "OrgnlTxId": "SPARDEFFXXX20190528SCTP80010010001",
+            "OrgnlIntrBkSttlmAmt": {
+                "Ccy": "EUR",
+                "content": 1000
+            },
+            "OrgnlGrpInf": {
+                "OrgnlMsgId": "SPARDEFFXXX20190528SCTP8001001",
+                "OrgnlMsgNmId": "PACS.008"
+            },
+            "OrgnlEndToEndId": "NOTPROVIDED",
+            "OrgnlIntrBkSttlmDt": "2019-05-28"
+        }},
+        "Case": {
+            "Cretr": {"Agt": {"FinInstnId": {"BICFI": "SPARDEFFXXX"}}},
+            "Id": "REF-C27-2019-06-11-TX-100A001"
+        }
+    },
+    "SndgInst": "MARKDEFF",
+    "xsi:schemaLocation": "urn:xsd:$BBkOQFBlkCdtTrf BBkOQFBlkCdtTrf.xsd",
+    "TstCode": "T",
+    "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "FileBusDt": "2019-06-11",
+    "FileCycleNo": 92,
+    "FileRef": 2019061100018451,
+    "SrvcId": "SCT",
+    "xmlns:BBkOQF": "urn:xsd:$BBkOQFBlkCdtTrf",
+    "RcvgInst": "BANKDEFFXXX"
+}}

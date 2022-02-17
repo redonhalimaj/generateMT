@@ -25,29 +25,45 @@ public class Main {
                 JSONObject parseToJson = parseXMLtoJSON(incomingXMLFile);
                 String xmlConverted = parseToJson.toString(4);
 
-                Random rnd = new Random();
-                int num = rnd.nextInt(100,999);
-                char randomizedCharacter = (char) (rnd.nextInt(26) + 'a');
-                String refNumber = String.format("%01d", num);
                 String writtenJSON;
                 if(file.getName().contains("camt.027")){
-                    writtenJSON =  "src/main/resources/WrittenJsonFiles/Nr_"+refNumber+randomizedCharacter+"_BBkOQFBlkCdtTrf_camt.027.json";
+                    writtenJSON =  "src/main/resources/WrittenJsonFiles/Nr_"+file.getName().replaceAll(".xml",".json");
                     String writtenJsonFileDestination = writtenJSON;
                     writeJSONFile(xmlConverted,writtenJsonFileDestination);
+
+                    Camt27 claimOfNonReceipt = new Camt27();
+                    String output = "src/main/resources/OutputFiles/Nr_"+file.getName().replaceAll(".xml",".txt");
+                    claimOfNonReceipt.writeCamt27ile(claimOfNonReceipt.getSndgInst(parseToJson), claimOfNonReceipt.getRcvgInst(parseToJson), claimOfNonReceipt.getFileRef(parseToJson),
+                            claimOfNonReceipt.getSrvcId(parseToJson),claimOfNonReceipt.getAssignee(parseToJson),claimOfNonReceipt.getAssigner(parseToJson),claimOfNonReceipt.getInstrInf(parseToJson),
+                            claimOfNonReceipt.getOrgnlTxId(parseToJson),claimOfNonReceipt.getCdtrNm(parseToJson),claimOfNonReceipt.getCdtrAgt(parseToJson),claimOfNonReceipt.getPmtTpInf(parseToJson),
+                            claimOfNonReceipt.getDbtrAcct(parseToJson),claimOfNonReceipt.getSttlmMtd(parseToJson),claimOfNonReceipt.getClrSys(parseToJson),claimOfNonReceipt.getCdtrAcct(parseToJson),
+                            claimOfNonReceipt.getDbtrAgt(parseToJson),claimOfNonReceipt.getDbtrNm(parseToJson),claimOfNonReceipt.getOrgnlMsgId(parseToJson),claimOfNonReceipt.getOrgnlMsgNmId(parseToJson),
+                            claimOfNonReceipt.getOrgnlEndToEndId(parseToJson),claimOfNonReceipt.getOrgnlIntrBkSttlmDt(parseToJson),claimOfNonReceipt.getCaseId(parseToJson),claimOfNonReceipt.getCaseCretr(parseToJson),
+                            output);
+
+
                 }else if(file.getName().contains("camt.087")){
-                    writtenJSON =  "src/main/resources/WrittenJsonFiles/Nr_"+refNumber+randomizedCharacter+"_BBkOQFBlkCdtTrf_camt.087.json";
+
+                    writtenJSON =  "src/main/resources/WrittenJsonFiles/Nr_"+file.getName().replaceAll(".xml",".json");
                     String writtenJsonFileDestination = writtenJSON;
                     writeJSONFile(xmlConverted,writtenJsonFileDestination);
+
                 }else if(file.getName().contains("pacs.028")){
-                    writtenJSON =  "src/main/resources/WrittenJsonFiles/Nr_"+refNumber+randomizedCharacter+"_BBkOQFBlkCdtTrf_pacs.028.json";
+
+                    writtenJSON =  "src/main/resources/WrittenJsonFiles/Nr_"+file.getName().replaceAll(".xml",".json");
                     String writtenJsonFileDestination = writtenJSON;
                     writeJSONFile(xmlConverted,writtenJsonFileDestination);
+
                 }else if(file.getName().contains("camt.029")){
-                    writtenJSON =  "src/main/resources/WrittenJsonFiles/Nr_"+refNumber+randomizedCharacter+"_BBkOQFBlkCdtTrf_camt.029.json";
+
+                    writtenJSON =  "src/main/resources/WrittenJsonFiles/Nr_"+file.getName().replaceAll(".xml",".json");;
                     String writtenJsonFileDestination = writtenJSON;
                     writeJSONFile(xmlConverted,writtenJsonFileDestination);
+
                 }else {
+
                     System.out.println("File is not XML!");
+
                 }
 
             }
@@ -57,12 +73,13 @@ public class Main {
 
 
     //Reads the incoming xml file and converts it to string
-    public static String readFileAsString(String file) throws Exception
-    {
+    public static String readFileAsString(String file) throws Exception {
+
         return new String(Files.readAllBytes(Paths.get(file)));
     }
 
     public static JSONObject parseXMLtoJSON(String incomingFilePath) throws Exception{
+
         String xml = readFileAsString(incomingFilePath);
         JSONObject jsonObject = XML.toJSONObject(xml.replaceAll("\\r\\n\\s+|BBkOQF:",""));
         return jsonObject;
@@ -70,6 +87,7 @@ public class Main {
     }
 
     public static void writeJSONFile(String fileToWrite, String fileDestination) throws IOException {
+
         File writtenFile = new File(fileDestination);
         FileWriter fw = new FileWriter(writtenFile);
         fw.write(fileToWrite.formatted("\n"));

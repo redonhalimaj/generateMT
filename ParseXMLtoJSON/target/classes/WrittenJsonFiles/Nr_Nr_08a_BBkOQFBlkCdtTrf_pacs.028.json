@@ -1,0 +1,50 @@
+{"BBkOQFBlkCdtTrf": {
+    "RoutingInd": "RET",
+    "FType": "OQF",
+    "SndgInst": "MARKDEFF",
+    "xsi:schemaLocation": "urn:xsd:$BBkOQFBlkCdtTrf BBkOQFBlkCdtTrf.xsd",
+    "TstCode": "T",
+    "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "FIToFIPmtStsReq": {
+        "xmlns": "urn:iso:std:iso:20022:tech:xsd:sct:pacs.028.001.01",
+        "GrpHdr": {
+            "InstdAgt": {"FinInstnId": {"BICFI": "BANKDEFFXXX"}},
+            "CreDtTm": "2019-06-28T12:30:47Z",
+            "MsgId": "20190628-034225-001"
+        },
+        "TxInf": {
+            "OrgnlTxRef": {
+                "Cdtr": {"Nm": "Scotty Star"},
+                "CdtrAgt": {"FinInstnId": {"BICFI": "BANKDEFFXXX"}},
+                "PmtTpInf": {"SvcLvl": {"Cd": "SEPA"}},
+                "DbtrAcct": {"Id": {"IBAN": "DE73500000000500000000"}},
+                "IntrBkSttlmAmt": {
+                    "Ccy": "EUR",
+                    "content": 2000
+                },
+                "SttlmInf": {
+                    "SttlmMtd": "CLRG",
+                    "ClrSys": {"Prtry": "SCL"}
+                },
+                "CdtrAcct": {"Id": {"IBAN": "DE84300777000123456789"}},
+                "DbtrAgt": {"FinInstnId": {"BICFI": "SPARDEFFXXX"}},
+                "Dbtr": {"Nm": "Max Mustermann"},
+                "IntrBkSttlmDt": "2019-05-28"
+            },
+            "StsReqId": "SPARDEFFXXX20190628SCTP280100100001",
+            "OrgnlTxId": "SPARDEFFXXX20190528SCTP800100100002",
+            "OrgnlInstrId": "REF-C27-2019-06-11-TX-100A002",
+            "OrgnlEndToEndId": "NOTPROVIDED"
+        },
+        "OrgnlGrpInf": {
+            "OrgnlMsgId": "SPARDEFFXXX20190611SCTC2701002",
+            "OrgnlMsgNmId": "camt.027"
+        }
+    },
+    "FileBusDt": "2019-06-28",
+    "FileCycleNo": 92,
+    "FileRef": 2019062800034225,
+    "SrvcId": "SCT",
+    "xmlns:BBkOQF": "urn:xsd:$BBkOQFBlkCdtTrf",
+    "RcvgInst": "BANKDEFFXXX"
+}}

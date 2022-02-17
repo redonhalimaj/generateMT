@@ -1,0 +1,59 @@
+{"BBkOQFBlkCdtTrf": {
+    "RoutingInd": "IND",
+    "FType": "OQF",
+    "SndgInst": "MARKDEFF",
+    "RsltnOfInvstgtn": {
+        "xmlns": "urn:iso:std:iso:20022:tech:xsd:sct:camt.029.001.08",
+        "ModDtls": {
+            "ModStsId": "BANKDEFFXXX20190701SCT0000100100001",
+            "OrgnlTxRef": {
+                "Cdtr": {"Pty": {"Nm": "Scotty Star"}},
+                "CdtrAgt": {"FinInstnId": {"BICFI": "BANKDEFFXXX"}},
+                "PmtTpInf": {"SvcLvl": {"Cd": "SEPA"}},
+                "DbtrAcct": {"Id": {"IBAN": "DE73500000000500000000"}},
+                "IntrBkSttlmAmt": {
+                    "Ccy": "EUR",
+                    "content": 2000
+                },
+                "SttlmInf": {
+                    "SttlmMtd": "CLRG",
+                    "ClrSys": {"Prtry": "SCL"}
+                },
+                "CdtrAcct": {"Id": {"IBAN": "DE84300777000123456789"}},
+                "DbtrAgt": {"FinInstnId": {"BICFI": "SPARDEFFXXX"}},
+                "Dbtr": {"Pty": {"Nm": "Max Mustermann"}},
+                "IntrBkSttlmDt": "2019-05-28"
+            },
+            "OrgnlTxId": "SPARDEFFXXX20190528SCTP80010010002",
+            "OrgnlGrpInf": {
+                "OrgnlMsgId": "20190611-P8OUTTX4-001",
+                "OrgnlMsgNmId": "PACS.008"
+            },
+            "OrgnlEndToEndId": "NOTPROVIDED"
+        },
+        "Sts": {"Conf": "RJNR"},
+        "Assgnmt": {
+            "CreDtTm": "2019-07-01T11:30:47Z",
+            "Assgne": {"Agt": {"FinInstnId": {"BICFI": "SPARDEFFXXX"}}},
+            "Id": "20190701-073676-001",
+            "Assgnr": {"Agt": {"FinInstnId": {"BICFI": "MARKDEFF"}}}
+        },
+        "RslvdCase": {
+            "Cretr": {"Agt": {"FinInstnId": {"BICFI": "SPARDEFFXXX"}}},
+            "Id": "REF-C27-2019-06-11-TX-100A002"
+        },
+        "ClmNonRctDtls": {"Accptd": {
+            "DtPrcd": "2019-07-01",
+            "OrgnlNxtAgt": {"FinInstnId": {"BICFI": "BANKDEFFXXX"}}
+        }}
+    },
+    "xsi:schemaLocation": "urn:xsd:$BBkOQFBlkCdtTrf BBkOQFBlkCdtTrf.xsd",
+    "TstCode": "T",
+    "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "FileBusDt": "2019-07-01",
+    "FileCycleNo": 92,
+    "FileRef": 2019070100073676,
+    "SrvcId": "SCT",
+    "xmlns:BBkOQF": "urn:xsd:$BBkOQFBlkCdtTrf",
+    "RcvgInst": "SPARDEFFXXX"
+}}

@@ -1,0 +1,23 @@
+Sending Institution: MARKDEFF
+Receiving Institution: BANKDEFFXXX
+File Reference: 2019061100018451
+Service ID: SCT
+Assignee: BANKDEFFXXX
+Assigner: MARKDEFF
+Instruction Info: Claim of non receipt
+Original Transaction ID: SPARDEFFXXX20190528SCTP80010010001
+Creditor Name: Scotty Star
+Creditor Agent BIC: BANKDEFFXXX
+Creditor Account: DE84300777000123456789
+Payment to payment Info: SEPA
+Debtor Name: Max Mustermann
+Debtor Agent BIC: SPARDEFFXXX
+Debtor Account: DE73500000000500000000
+Settlement Method: CLRG
+Clearing System: SCL
+Original Message ID: SPARDEFFXXX20190528SCTP8001001
+Original Message Name ID: PACS.008
+Original End-to-end ID: NOTPROVIDED
+Original Interbank Settlement Date: 2019-05-28
+Case ID: REF-C27-2019-06-11-TX-100A001
+Case Creator : SPARDEFFXXX
