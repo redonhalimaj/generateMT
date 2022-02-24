@@ -1,7 +1,6 @@
 package com.company;
 
 import java.io.*;
-import java.nio.file.AccessDeniedException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
@@ -10,15 +9,15 @@ import java.util.Random;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
-public class DTAPaymentEmbargo {
+public class GTVOFailFormat {
     public static void main(String[] args) throws Exception {
-        String path = "C:\\Users\\redon\\IdeaProjects\\generateMT\\src\\test\\resources\\mtFiles\\MT103_Embargo_dtazv_Template.txt";
-        String dtaFile = readFileAsString(path);
-        //System.out.println(mtFile);
 
-        Calendar calendar = Calendar.getInstance();
-        SimpleDateFormat formatter = new SimpleDateFormat("HHmmyyMMdd");
-        SimpleDateFormat formatter1 = new SimpleDateFormat("yyMMdd");
+        String path = "C:\\Users\\redon\\IdeaProjects\\generateMT\\src\\test\\resources\\mtFiles\\MT103_GtvoFailFormat_dtazv_Template.txt";
+        String dtaFile = readFileAsString(path);
+
+        Calendar calendar = Calendar.getInstance(); //Data momentale 2022/02/24 10:58:23
+        SimpleDateFormat formatter = new SimpleDateFormat("HHmmMyyMdd");
+        SimpleDateFormat formatter1 = new SimpleDateFormat("yyMMdd"); //210405 <Insert_Date>
         SimpleDateFormat nameConventionForMT1 = new SimpleDateFormat("yyyyMMdd");
         SimpleDateFormat nameConventionForMT2 = new SimpleDateFormat("HHmmss");
 
@@ -35,7 +34,7 @@ public class DTAPaymentEmbargo {
                     .replaceAll("<total_sum>",String.valueOf(totalSum));
 
 
-            String newFilePath = "C:\\Users\\redon\\IdeaProjects\\generateMT\\src\\test\\resources\\mtFiles\\generatedPayments\\OutgoingPayments\\Embargowait\\" +
+            String newFilePath = "C:\\Users\\redon\\IdeaProjects\\generateMT\\src\\test\\resources\\mtFiles\\generatedPayments\\OutgoingPayments\\GTVOFailFormat\\" +
                     "HCOB2BR.DTAZV_SAPDM." + nameConventionForMT1.format(calendar.getTime()) + "." + nameConventionForMT2.format(calendar.getTime()) + "."+threeDigitNumber+".dta";
 
             File outputFile = new File(newFilePath);
@@ -43,7 +42,7 @@ public class DTAPaymentEmbargo {
             fw.write(finalString);
             fw.close();
 
-            String secondNewFilePath = "C:\\Users\\redon\\IdeaProjects\\generateMT\\src\\test\\resources\\mtFiles\\generatedPayments\\OutgoingPayments\\Embargowait\\" +
+            String secondNewFilePath = "C:\\Users\\redon\\IdeaProjects\\generateMT\\src\\test\\resources\\mtFiles\\generatedPayments\\OutgoingPayments\\GTVOFailFormat\\" +
                     "HCOB2BR.DTAZV_SAPDM." + nameConventionForMT1.format(calendar.getTime()) + "." + nameConventionForMT2.format(calendar.getTime()) + "."+threeDigitNumber+".txt";
             File secondOutputFile = new File(secondNewFilePath);
             FileWriter fw1 = new FileWriter(secondOutputFile);
@@ -52,7 +51,7 @@ public class DTAPaymentEmbargo {
 
 
             //path of the zipped file
-            String zippedFile = "C:\\Users\\redon\\IdeaProjects\\generateMT\\src\\test\\resources\\mtFiles\\generatedPayments\\OutgoingPayments\\Embargowait\\" +
+            String zippedFile = "C:\\Users\\redon\\IdeaProjects\\generateMT\\src\\test\\resources\\mtFiles\\generatedPayments\\OutgoingPayments\\GTVOFailFormat\\" +
                     "B2H.PAD.BTEB.AZVJ.EFXP.D" + nameConventionForMT1.format(calendar.getTime()) + ".T" + nameConventionForMT2.format(calendar.getTime()) + ".zip";
 
             zipFile(secondNewFilePath,zippedFile);
@@ -65,7 +64,7 @@ public class DTAPaymentEmbargo {
                     .replaceAll("<total_sum>","0"+String.valueOf(totalSum));
 
 
-            String newFilePath = "C:\\Users\\redon\\IdeaProjects\\generateMT\\src\\test\\resources\\mtFiles\\generatedPayments\\OutgoingPayments\\Embargowait\\" +
+            String newFilePath = "C:\\Users\\redon\\IdeaProjects\\generateMT\\src\\test\\resources\\mtFiles\\generatedPayments\\OutgoingPayments\\GTVOFailFormat\\" +
                     "HCOB2BR.DTAZV_SAPDM." + nameConventionForMT1.format(calendar.getTime()) + "." + nameConventionForMT2.format(calendar.getTime()) + "."+threeDigitNumber+".dta";
 
             File outputFile = new File(newFilePath);
@@ -73,7 +72,7 @@ public class DTAPaymentEmbargo {
             fw.write(finalString);
             fw.close();
 
-            String secondNewFilePath = "C:\\Users\\redon\\IdeaProjects\\generateMT\\src\\test\\resources\\mtFiles\\generatedPayments\\OutgoingPayments\\Embargowait\\" +
+            String secondNewFilePath = "C:\\Users\\redon\\IdeaProjects\\generateMT\\src\\test\\resources\\mtFiles\\generatedPayments\\OutgoingPayments\\GTVOFailFormat\\" +
                     "HCOB2BR.DTAZV_SAPDM." + nameConventionForMT1.format(calendar.getTime()) + "." + nameConventionForMT2.format(calendar.getTime()) + "."+threeDigitNumber+".txt";
             File secondOutputFile = new File(secondNewFilePath);
             FileWriter fw1 = new FileWriter(secondOutputFile);
@@ -82,7 +81,7 @@ public class DTAPaymentEmbargo {
 
 
             //path of the zipped file
-            String zippedFile = "C:\\Users\\redon\\IdeaProjects\\generateMT\\src\\test\\resources\\mtFiles\\generatedPayments\\OutgoingPayments\\Embargowait\\" +
+            String zippedFile = "C:\\Users\\redon\\IdeaProjects\\generateMT\\src\\test\\resources\\mtFiles\\generatedPayments\\OutgoingPayments\\GTVOFailFormat\\" +
                     "B2H.PAD.BTEB.AZVJ.EFXP.D" + nameConventionForMT1.format(calendar.getTime()) + ".T" + nameConventionForMT2.format(calendar.getTime()) + ".zip";
 
             zipFile(secondNewFilePath,zippedFile);
@@ -93,6 +92,8 @@ public class DTAPaymentEmbargo {
 
 
     }
+
+    //Metode per me lexu Template Fajllin dhe me e konvertu ne STRING
     public static String readFileAsString(String file) throws Exception
     {
         return new String(Files.readAllBytes(Paths.get(file)));
@@ -114,5 +115,4 @@ public class DTAPaymentEmbargo {
         fis.close();
         fos.close();
     }
-
 }

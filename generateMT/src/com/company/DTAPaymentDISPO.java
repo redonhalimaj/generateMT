@@ -26,24 +26,70 @@ public class DTAPaymentDISPO {
         Random rnd = new Random();
         int twoDigitNumber = rnd.nextInt(10,99);
         int threeDigitNumber = rnd.nextInt(100,999);
-        int totalSum = rnd.nextInt(1,99);
-        String finalString = dtaFile
-                            .replaceAll("<Insert_Date>", formatter1.format(calendar.getTime()))
-                            .replaceAll("<Insert_Two_Digit_Number>", String.valueOf(twoDigitNumber))
-                            .replaceAll("<Total_Sum>",String.valueOf(totalSum));
-
-                    String newFilePath = "C:\\Users\\redon\\IdeaProjects\\generateMT\\src\\test\\resources\\mtFiles\\generatedPayments\\OutgoingPayments\\Dispowait\\HCOB2BR.DTAZV_SAPDM." + nameConventionForMT1.format(calendar.getTime()) + "." + nameConventionForMT2.format(calendar.getTime()) + "."+threeDigitNumber+".dta";
-                    File outputFile = new File(newFilePath);
-                    FileWriter fw = new FileWriter(outputFile);
-
-
-                    fw.write(finalString);
-                    fw.close();
+        int Sum = rnd.nextInt(1,9);
+        int totalSum = Sum*3;
+        if(totalSum>9){
+            String finalString = dtaFile
+                    .replaceAll("<Insert_Date>", formatter1.format(calendar.getTime()))
+                    .replaceAll("<Insert_Two_Digit_Number>", String.valueOf(twoDigitNumber))
+                    .replaceAll("<sum>",String.valueOf(Sum))
+                    .replaceAll("<total_sum>",String.valueOf(totalSum));
 
 
-        String zippedFile = "C:\\Users\\redon\\IdeaProjects\\generateMT\\src\\test\\resources\\mtFiles\\generatedPayments\\OutgoingPayments\\Dispowait\\B2H.PAD.BTEB.AZVJ.EFXP.D" + nameConventionForMT1.format(calendar.getTime()) + ".T" + nameConventionForMT2.format(calendar.getTime()) + ".zip";
+            String newFilePath = "C:\\Users\\redon\\IdeaProjects\\generateMT\\src\\test\\resources\\mtFiles\\generatedPayments\\OutgoingPayments\\Dispowait\\" +
+                    "HCOB2BR.DTAZV_SAPDM." + nameConventionForMT1.format(calendar.getTime()) + "." + nameConventionForMT2.format(calendar.getTime()) + "."+threeDigitNumber+".dta";
 
-        zipFile(newFilePath,zippedFile);
+            File outputFile = new File(newFilePath);
+            FileWriter fw = new FileWriter(outputFile);
+            fw.write(finalString);
+            fw.close();
+
+            String secondNewFilePath = "C:\\Users\\redon\\IdeaProjects\\generateMT\\src\\test\\resources\\mtFiles\\generatedPayments\\OutgoingPayments\\Dispowait\\" +
+                    "HCOB2BR.DTAZV_SAPDM." + nameConventionForMT1.format(calendar.getTime()) + "." + nameConventionForMT2.format(calendar.getTime()) + "."+threeDigitNumber+".txt";
+            File secondOutputFile = new File(secondNewFilePath);
+            FileWriter fw1 = new FileWriter(secondOutputFile);
+            fw1.write(finalString);
+            fw1.close();
+
+
+            //path of the zipped file
+            String zippedFile = "C:\\Users\\redon\\IdeaProjects\\generateMT\\src\\test\\resources\\mtFiles\\generatedPayments\\OutgoingPayments\\Dispowait\\" +
+                    "B2H.PAD.BTEB.AZVJ.EFXP.D" + nameConventionForMT1.format(calendar.getTime()) + ".T" + nameConventionForMT2.format(calendar.getTime()) + ".zip";
+
+            zipFile(secondNewFilePath,zippedFile);
+        }
+        else if(totalSum<=9) {
+            String finalString = dtaFile
+                    .replaceAll("<Insert_Date>", formatter1.format(calendar.getTime()))
+                    .replaceAll("<Insert_Two_Digit_Number>", String.valueOf(twoDigitNumber))
+                    .replaceAll("<sum>",String.valueOf(Sum))
+                    .replaceAll("<total_sum>","0"+String.valueOf(totalSum));
+
+
+            String newFilePath = "C:\\Users\\redon\\IdeaProjects\\generateMT\\src\\test\\resources\\mtFiles\\generatedPayments\\OutgoingPayments\\Dispowait\\" +
+                    "HCOB2BR.DTAZV_SAPDM." + nameConventionForMT1.format(calendar.getTime()) + "." + nameConventionForMT2.format(calendar.getTime()) + "."+threeDigitNumber+".dta";
+
+            File outputFile = new File(newFilePath);
+            FileWriter fw = new FileWriter(outputFile);
+            fw.write(finalString);
+            fw.close();
+
+            String secondNewFilePath = "C:\\Users\\redon\\IdeaProjects\\generateMT\\src\\test\\resources\\mtFiles\\generatedPayments\\OutgoingPayments\\Dispowait\\" +
+                    "HCOB2BR.DTAZV_SAPDM." + nameConventionForMT1.format(calendar.getTime()) + "." + nameConventionForMT2.format(calendar.getTime()) + "."+threeDigitNumber+".txt";
+            File secondOutputFile = new File(secondNewFilePath);
+            FileWriter fw1 = new FileWriter(secondOutputFile);
+            fw1.write(finalString);
+            fw1.close();
+
+
+            //path of the zipped file
+            String zippedFile = "C:\\Users\\redon\\IdeaProjects\\generateMT\\src\\test\\resources\\mtFiles\\generatedPayments\\OutgoingPayments\\Dispowait\\" +
+                    "B2H.PAD.BTEB.AZVJ.EFXP.D" + nameConventionForMT1.format(calendar.getTime()) + ".T" + nameConventionForMT2.format(calendar.getTime()) + ".zip";
+
+            zipFile(secondNewFilePath,zippedFile);
+        }
+
+
 
     }
 
